@@ -1,21 +1,32 @@
-# QR Pro Tools
+# QR Pro Tools — brcode.online
 
-Professional static QR generator and scanner website.
+موقع Static احترافي لإنشاء وفحص رموز QR، مبني للعمل مباشرة على GitHub Pages أو Cloudflare Pages.
 
-## Languages
+## الوظائف
+- إنشاء QR للرابط والنص وWi‑Fi وVCard وWhatsApp والبريد الإلكتروني.
+- فحص QR بالكاميرا أو من صورة.
+- تحميل QR بصيغة PNG بعد الإنشاء.
+- العربية والإنجليزية عبر JavaScript مع حفظ اللغة.
+- RTL/LTR تلقائي.
+- Dark / Light Mode مع حفظ الاختيار.
+- Back to Top.
+- إشعارات Toast وإدارة Cookie consent.
+- صفحات منظمة: من نحن، اتصل بنا، سياسة الخصوصية، سياسة الاستخدام، وخريطة الموقع.
+- SEO: title, description, keywords, canonical, hreflang, Open Graph, robots وXML sitemap.
+- AdSense وGoogle Analytics الموجودان للموقع.
+- Responsive design للموبايل والكمبيوتر.
 
-- Arabic is the default language.
-- English is available from the language button using the existing JavaScript translation system on the home page (`?lang=en`).
-- English legal/about pages are also provided as dedicated crawlable pages: `about-en.html`, `contact-en.html`, `privacy-en.html`, and `terms-en.html`.
+## البنية
+- `index.html` — التطبيق الرئيسي.
+- `assets/app.js` — وظائف QR والماسح واللغة والثيم.
+- `assets/style.css` — التصميم المتجاوب.
+- `assets/pages.js` — اللغة والثيم للصفحات الداخلية.
+- `sitemap.xml` — خريطة XML لمحركات البحث.
+- `sitemap.html` — خريطة مرئية للمستخدم.
+- `_headers` و`_redirects` — إعدادات Cloudflare Pages.
 
-## Deployment
+## Cloudflare Pages
+اربط المستودع بـ Cloudflare Pages، اترك Build command فارغًا، واجعل Output directory هو جذر المشروع (`.`). لا توجد حاجة إلى Node.js أو عملية Build.
 
-### Cloudflare Pages
-Connect this repository to Cloudflare Pages. No build command is required. Use the repository root (`.`) as the output directory.
-
-### GitHub Pages
-Upload the repository contents to GitHub and enable Pages from the `main` branch root.
-
-## Notes
-
-The project is intentionally static: HTML, CSS, JavaScript and public assets only. Third-party CDN libraries are used for Font Awesome, Google Fonts, QRCode.js and html5-qrcode.
+## GitHub Pages
+فعّل Pages من فرع `main` ومن مجلد الجذر.
