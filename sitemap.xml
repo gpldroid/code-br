@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url><loc>https://brcode.online/</loc><changefreq>daily</changefreq><priority>1.0</priority></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<url><loc>https://brcode.online/</loc><changefreq>daily</changefreq><priority>1.0</priority><xhtml:link rel="alternate" hreflang="ar" href="https://brcode.online/"/><xhtml:link rel="alternate" hreflang="en" href="https://brcode.online/?lang=en"/></url>
 <url><loc>https://brcode.online/about.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 <url><loc>https://brcode.online/contact.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
 <url><loc>https://brcode.online/privacy.html</loc><changefreq>yearly</changefreq><priority>0.4</priority></url>
 <url><loc>https://brcode.online/terms.html</loc><changefreq>yearly</changefreq><priority>0.4</priority></url>
+<url><loc>https://brcode.online/sitemap.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
 </urlset>
