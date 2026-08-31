@@ -1,2 +1,23 @@
-<!doctype html>
-<!-- QR Pro Tools bilingual site -->
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QR Pro Tools</title>
+<meta name="description" content="Professional QR code generator and scanner with Arabic and English support.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%237c3aed'/%3E%3Cpath fill='white' d='M10 10h18v18H10zm5 5v8h8v-8zM36 10h18v18H36zm5 5v8h8v-8zM10 36h18v18H10zm5 5v8h8v-8zM36 36h7v7h-7zm11 0h7v18h-7zm-11 11h7v7h-7z'/%3E%3C/svg%3E">
+<style>
+:root{--primary:#7c3aed;--bg:#f8fafc;--card:#fff;--text:#111827;--muted:#64748b;--border:#e2e8f0}*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:var(--bg);color:var(--text)}header{padding:28px 20px;text-align:center;background:linear-gradient(135deg,#7c3aed,#4f46e5);color:#fff}main{max-width:1100px;margin:30px auto;padding:0 18px}.hero{text-align:center}.hero h1{font-size:42px;margin:0 0 10px}.hero p{color:#e9d5ff}.tools{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin-top:30px}.card{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:24px;box-shadow:0 8px 30px #0000000d}.card h2{margin-top:0}.btn{display:inline-block;border:0;border-radius:10px;padding:12px 18px;background:var(--primary);color:#fff;text-decoration:none;cursor:pointer}.links{text-align:center;margin:30px 0}.links a{margin:0 8px;color:var(--primary)}footer{text-align:center;padding:30px;color:var(--muted)}.lang{position:absolute;top:16px;right:16px;background:#ffffff22;border:1px solid #ffffff55;color:#fff;border-radius:8px;padding:8px 12px;cursor:pointer}@media(max-width:600px){.hero h1{font-size:30px}}
+</style>
+</head>
+<body>
+<header><button class="lang" id="langBtn" onclick="toggleLang()">English</button><div class="hero"><h1 data-i18n="title">QR Pro Tools</h1><p data-i18n="subtitle">أدوات احترافية لإنشاء ومسح رموز QR</p></div></header>
+<main><section class="tools"><article class="card"><h2 data-i18n="generator">مولد QR Code</h2><p data-i18n="generatorText">أنشئ رمز QR بسرعة من النص أو الرابط.</p><a class="btn" href="#generator" data-i18n="open">فتح الأداة</a></article><article class="card"><h2 data-i18n="scanner">ماسح QR Code</h2><p data-i18n="scannerText">امسح رمز QR باستخدام الكاميرا أو الصورة.</p><a class="btn" href="#scanner" data-i18n="open">فتح الأداة</a></article></section><nav class="links"><a href="about.html" data-i18n="about">من نحن</a><a href="contact.html" data-i18n="contact">اتصل بنا</a><a href="privacy.html" data-i18n="privacy">الخصوصية</a><a href="terms.html" data-i18n="terms">الشروط</a></nav></main>
+<footer>© <span id="year"></span> QR Pro Tools</footer>
+<script>
+const translations={ar:{title:'QR Pro Tools',subtitle:'أدوات احترافية لإنشاء ومسح رموز QR',generator:'مولد QR Code',generatorText:'أنشئ رمز QR بسرعة من النص أو الرابط.',scanner:'ماسح QR Code',scannerText:'امسح رمز QR باستخدام الكاميرا أو الصورة.',open:'فتح الأداة',about:'من نحن',contact:'اتصل بنا',privacy:'الخصوصية',terms:'الشروط'},en:{title:'QR Pro Tools',subtitle:'Professional tools to generate and scan QR codes',generator:'QR Code Generator',generatorText:'Create a QR code quickly from text or a URL.',scanner:'QR Code Scanner',scannerText:'Scan a QR code using your camera or an image.',open:'Open Tool',about:'About Us',contact:'Contact',privacy:'Privacy',terms:'Terms'}};
+function setLang(lang){document.documentElement.lang=lang;document.documentElement.dir=lang==='ar'?'rtl':'ltr';document.querySelectorAll('[data-i18n]').forEach(el=>{el.textContent=translations[lang][el.dataset.i18n]||el.textContent});document.getElementById('langBtn').textContent=lang==='ar'?'English':'العربية';localStorage.setItem('qr-lang',lang);history.replaceState(null,'',lang==='en'?'?lang=en':'?lang=ar')}
+function toggleLang(){setLang((document.documentElement.lang||'ar')==='ar'?'en':'ar')}
+const initial=new URLSearchParams(location.search).get('lang')||localStorage.getItem('qr-lang')||'ar';setLang(initial==='en'?'en':'ar');document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+</body></html>
