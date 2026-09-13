@@ -1,32 +1,21 @@
-# QR Pro Tools — brcode.online
+# Next.js template
 
-موقع Static احترافي لإنشاء وفحص رموز QR، مبني للعمل مباشرة على GitHub Pages أو Cloudflare Pages.
+This is a Next.js template with shadcn/ui.
 
-## الوظائف
-- إنشاء QR للرابط والنص وWi‑Fi وVCard وWhatsApp والبريد الإلكتروني.
-- فحص QR بالكاميرا أو من صورة.
-- تحميل QR بصيغة PNG بعد الإنشاء.
-- العربية والإنجليزية عبر JavaScript مع حفظ اللغة.
-- RTL/LTR تلقائي.
-- Dark / Light Mode مع حفظ الاختيار.
-- Back to Top.
-- إشعارات Toast وإدارة Cookie consent.
-- صفحات منظمة: من نحن، اتصل بنا، سياسة الخصوصية، سياسة الاستخدام، وخريطة الموقع.
-- SEO: title, description, keywords, canonical, hreflang, Open Graph, robots وXML sitemap.
-- AdSense وGoogle Analytics الموجودان للموقع.
-- Responsive design للموبايل والكمبيوتر.
+## Adding components
 
-## البنية
-- `index.html` — التطبيق الرئيسي.
-- `assets/app.js` — وظائف QR والماسح واللغة والثيم.
-- `assets/style.css` — التصميم المتجاوب.
-- `assets/pages.js` — اللغة والثيم للصفحات الداخلية.
-- `sitemap.xml` — خريطة XML لمحركات البحث.
-- `sitemap.html` — خريطة مرئية للمستخدم.
-- `_headers` و`_redirects` — إعدادات Cloudflare Pages.
+To add components to your app, run the following command:
 
-## Cloudflare Pages
-اربط المستودع بـ Cloudflare Pages، اترك Build command فارغًا، واجعل Output directory هو جذر المشروع (`.`). لا توجد حاجة إلى Node.js أو عملية Build.
+```bash
+npx shadcn@latest add button
+```
 
-## GitHub Pages
-فعّل Pages من فرع `main` ومن مجلد الجذر.
+This will place the ui components in the `components` directory.
+
+## Using components
+
+To use the components in your app, import them as follows:
+
+```tsx
+import { Button } from "@/components/ui/button";
+```
